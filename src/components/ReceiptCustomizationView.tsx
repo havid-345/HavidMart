@@ -165,7 +165,7 @@ export const ReceiptCustomizationView: React.FC = () => {
                     required
                     value={form.storeAddress || ''}
                     onChange={(e) => handleChange('storeAddress', e.target.value)}
-                    placeholder="Contoh: Jl. Melati No. 12, Pasar Anyar"
+                    placeholder="Contoh: Jl. Guna Tani, Dusun Biru, Cijati, Cimanggu"
                     className="w-full pl-9 pr-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white focus:outline-none focus:border-purple-500"
                   />
                 </div>
@@ -181,7 +181,7 @@ export const ReceiptCustomizationView: React.FC = () => {
                     type="text"
                     value={form.storePhone || ''}
                     onChange={(e) => handleChange('storePhone', e.target.value)}
-                    placeholder="Contoh: 0812-9876-5432"
+                    placeholder="Contoh: 0838-3869-5666"
                     className="w-full pl-9 pr-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 font-mono"
                   />
                 </div>
@@ -338,9 +338,9 @@ export const ReceiptCustomizationView: React.FC = () => {
                 {form.storeTagline && (
                   <p className="text-[10px] text-slate-600">{form.storeTagline}</p>
                 )}
-                <p className="text-[10px] text-slate-500">{form.storeAddress || 'Jl. Melati No. 12, Pasar Anyar'}</p>
-                {form.storePhone && (
-                  <p className="text-[10px] text-slate-500">Telp: {form.storePhone}</p>
+                <p className="text-[10px] text-slate-500">{form.storeAddress || 'Jl. Guna Tani, Dusun Biru, Cijati, Cimanggu'}</p>
+                {(form.storePhone || '0838-3869-5666') && (
+                  <p className="text-[10px] text-slate-500">Telp/WA: {form.storePhone || '0838-3869-5666'}</p>
                 )}
               </div>
 

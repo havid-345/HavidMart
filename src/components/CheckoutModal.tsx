@@ -309,10 +309,10 @@ export const CheckoutModal: React.FC = () => {
                     <div className="text-[10px] text-slate-500">{receiptConfig.storeTagline}</div>
                   )}
                   <div className="text-[10px] text-slate-500">
-                    {receiptConfig?.storeAddress || 'Jl. Melati No. 12, Pasar Anyar'}
+                    {receiptConfig?.storeAddress || 'Jl. Guna Tani, Dusun Biru, Cijati, Cimanggu'}
                   </div>
-                  {receiptConfig?.storePhone && (
-                    <div className="text-[10px] text-slate-500">Telp: {receiptConfig.storePhone}</div>
+                  {(receiptConfig?.storePhone || '0838-3869-5666') && (
+                    <div className="text-[10px] text-slate-500">Telp/WA: {receiptConfig?.storePhone || '0838-3869-5666'}</div>
                   )}
                   <div className="text-[10px] text-slate-400 mt-1">
                     ID: {recentCompletedTransaction?.id}

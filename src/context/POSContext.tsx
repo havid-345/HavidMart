@@ -227,7 +227,15 @@ export const POSProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const saved = localStorage.getItem(LOCAL_STORAGE_KEY_RECEIPT);
       if (saved) {
         try {
-          return { ...INITIAL_RECEIPT_CONFIG, ...JSON.parse(saved) };
+          const parsed = JSON.parse(saved);
+          const config = { ...INITIAL_RECEIPT_CONFIG, ...parsed };
+          if (!config.storeAddress || config.storeAddress.includes('Jl. Melati No. 12')) {
+            config.storeAddress = INITIAL_RECEIPT_CONFIG.storeAddress;
+          }
+          if (!config.storePhone || config.storePhone === '0812-9876-5432') {
+            config.storePhone = INITIAL_RECEIPT_CONFIG.storePhone;
+          }
+          return config;
         } catch { /* ignore */ }
       }
     }

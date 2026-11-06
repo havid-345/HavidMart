@@ -3,8 +3,8 @@ import { Coupon, Customer, Product, Transaction, StaffUser, ReceiptConfig } from
 export const INITIAL_RECEIPT_CONFIG: ReceiptConfig = {
   storeName: 'HAVID MART',
   storeTagline: 'Toko Kelontong & Sembako Murah',
-  storeAddress: 'Jl. Melati No. 12, Pasar Anyar',
-  storePhone: '0812-9876-5432',
+  storeAddress: 'Jl. Guna Tani, Dusun Biru, Cijati, Cimanggu',
+  storePhone: '0838-3869-5666',
   headerNote: 'Terima kasih atas kunjungan Anda',
   footerNote: 'Barang yang sudah dibeli dapat ditukar 1x24 jam jika cacat produksi.',
   showLogoOrIcon: true,
